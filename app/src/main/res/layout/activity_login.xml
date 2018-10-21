@@ -1,8 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@color/colorPrimary">
 
-</android.support.constraint.ConstraintLayout>
+    <requestFocus/>
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+    <ImageView
+            android:layout_marginBottom="10dp"
+            android:layout_width="fill_parent"
+            android:scaleType="centerCrop"
+            android:layout_height="150dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/backwhite"/>
+
+    <ImageView
+            android:layout_marginTop="65dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"
+            android:src="@drawable/bandeirasp"/>
+    </FrameLayout>
+
+    <TextView
+            android:text="Login"
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <EditText
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="300dp"
+            android:layout_gravity="center"
+            android:background="@android:color/white">
+    </EditText>
+
+    <TextView
+            android:text="Senha"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <EditText
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="300dp"
+            android:layout_gravity="center"
+            android:background="@android:color/white">
+
+    </EditText>
+
+    <Button
+            android:drawableTop="@drawable/baseline_near_me_white_24"
+            android:layout_width="150dp"
+            android:background="@color/colorAccent"
+            android:text="Entrar"
+            android:textColor="@android:color/white"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"/>
+
+</LinearLayout>

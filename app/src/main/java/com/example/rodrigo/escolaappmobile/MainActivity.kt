@@ -2,6 +2,7 @@ package com.example.rodrigo.escolaappmobile
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.DatePicker
 import android.widget.TextView
 import com.example.rodrigo.escolaappmobile.R
@@ -14,6 +15,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val textView = findViewById<TextView>(R.id.textView)
+        val buttonLogin = findViewById<Button>(R.id.login)
 
         val datePicker = findViewById<DatePicker>(R.id.datePicker)
         val today = Calendar.getInstance()
@@ -29,8 +31,9 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+        //apresenta por escrito a data que o usuario digitou
         textView.setOnClickListener(){
-            val teste = Intent(this, DiaSelecionado::class.java)
+            val intent = Intent(this, DiaSelecionado::class.java)
 
             val dados = Bundle()
 
@@ -38,10 +41,18 @@ class MainActivity : AppCompatActivity() {
             val data = "Data: ${datePicker.dayOfMonth}/${datePicker.month}/${datePicker.year}"
 
             dados.putString("data", data)
-            teste.putExtras(dados)
-            startActivity(teste)
-        } }
+            intent.putExtras(dados)
+            startActivity(intent)
+        }
+
+        //botão de login
+        buttonLogin.setOnClickListener(){
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
 
     }
+
+}
 
 

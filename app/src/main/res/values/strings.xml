@@ -3,4 +3,5 @@
     <string name="nome_do_app">Escola App</string>
     <string name="calendario_atividades">CALENDÁRIO DE ATIVIDADES</string>
     <string name="mes">Mes</string>
+    <string name="login">Login</string>
 </resources>
